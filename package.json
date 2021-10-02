@@ -1,6 +1,6 @@
 {
   "name": "marbustframework",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "This is the version of our Framework, now working through NodeJS",
   "main": "index.js",
   "scripts": {
