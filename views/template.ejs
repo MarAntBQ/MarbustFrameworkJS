@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <%- include('includes/head.ejs')%>
+    <%- include('includes/pwa.ejs')%>
 </head>
 <body>
     <header>
@@ -11,6 +12,7 @@
         <%- include('pages/' + PagetoLoad); -%>
     </main>
     <footer>
+        <%- include('includes/pwa-sw.ejs')%>
         <%- include('includes/footer.ejs')%>
     </footer>
 </body>
