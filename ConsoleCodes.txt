@@ -1,0 +1,6 @@
+npm init
+npm install --save express ejs body-parser
+npm install --save-dev nodemon
+
+
+//To install again the node_modules is => npm install
