@@ -19,6 +19,14 @@ router.get('/about', (req, res, next) => {
     });
 });
 
+router.get('/services', (req, res, next) => {
+    res.render('template', {
+        pageTitle: 'Services',
+        PagetoLoad: 'services',
+        Title: 'Mijin'
+    });
+});
+
 //404
 router.use((req, res, next) => {
     res.status(404).render('template', {
