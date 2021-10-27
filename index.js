@@ -10,11 +10,11 @@ app.set('view engine', 'ejs');
 
 app.set('views', 'views');
 
-const Controllers = require('./controllers/routes');
+const PublicRoutes = require('./routes/public');
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(Controllers);
+app.use(PublicRoutes);
 
 app.listen(3000);
