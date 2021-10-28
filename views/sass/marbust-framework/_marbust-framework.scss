@@ -1,0 +1,37 @@
+/* Marbust Technology Company Framework CSS 4.1.6 */
+/* Update December 16nd, 2020 */
+/* 2020 - Live a new Reality*/
+/* ------------News-------------------*/
+/*We added more pixels in font size until 250*/
+/*We added Flex Align Content (.flex-vcc)*/
+/*We added Font Bold (.tbold)*/
+/*We added Min Height in PX and %*/
+/*We added  "flex-direction: row-reverse;"*/
+/*We don't give more support to the scroll bar, you need to apply it to your own css*/
+/*Flex Box Updates with more features according the media queries and flex wraps options*/
+/*------------Main Files-----------------------------------*/
+/* framework.marbust.com/marbust-framework.scss <- SASS*/
+/* framework.marbust.com/marbust-framework.css <- CSS*/
+/*en: This framework it's auto-update, so you can add to your top of your html, or import with the code below, and obtain the new updated features */
+//1.- Main Style Decisions
+@import 'framework-partials/mainstyle';
+//2.- Media Queries Variables and Setup
+@import 'framework-partials/mediaqueries';
+//3.- Flex Box Grid Setups, by default it's 12 columns, you can deactivate
+@import 'framework-partials/flexboxsetups';
+//4.- Layout General Sections
+@import 'framework-partials/layouts';
+//5.- Bucles for width, margin, padding, etc.
+@import 'framework-partials/bucles';
+//6.- Shadows for projects.
+@import 'framework-partials/shadows';
+//7.- Text Aligns.
+@import 'framework-partials/textsetups';
+//8.- Hover Effects
+@import 'framework-partials/hovers';
+
+/*To import to your web site, in your css file add the next line:
+@import url("https://framework.marbust.com/marbust-framework.css");
+*/
+
+/* Licensed by: Marbust Technology Company® - All Rights Reserved | You're able to use, modify, but always giving credit to the author: WFD. Marco Antonio MGDA (Marbust CEO) */
