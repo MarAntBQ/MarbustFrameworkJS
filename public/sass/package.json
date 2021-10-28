@@ -1,5 +1,5 @@
 {
 	"scripts": {
-		"sass": "sass --watch styles.scss ../css/styles.css"
+		"sass": "sass --watch --no-source-map styles.scss ../../public/css/styles.css --style compressed"
 	}
 }
