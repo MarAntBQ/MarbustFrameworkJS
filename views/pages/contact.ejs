@@ -1,1 +1,14 @@
 <h1>Contact</h1>
+<div class="form-container">
+    <% if(errorMessage) { %>
+    <p class="tbold fs20px lh2em tac error-message"><%= errorMessage%></p>
+    <% } %>
+    <form action="/contact" method="POST">
+        <input class="<%= validationErrors.find(e => e.param === 'name') ?  'invalid' : '' %>" type="text" name="name" required placeholder="Ingrese su nombre" value="<%= oldInput.name %>">
+        <input class="<%= validationErrors.find(e => e.param === 'email') ?  'invalid' : '' %>" type="email" name="mail" required placeholder="Ingrese su email" value="<%= oldInput.mail %>">
+        <input class="<%= validationErrors.find(e => e.param === 'phone') ?  'invalid' : '' %>" type="tel" name="phone" required maxlength="10" pattern="[0-9]{10}" placeholder="Ingrese su teléfono" value="<%= oldInput.phone %>">
+        <textarea name="formMessage" class="<%= validationErrors.find(e => e.param === 'formMessage') ?  'invalid' : '' %>"><%= oldInput.formMessage %></textarea>
+        <button type="submit" class="">Enviar Mensaje <i class="fas fa-paper-plane"></i></button>
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    </form>
+</div>
