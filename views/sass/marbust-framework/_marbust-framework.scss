@@ -1,11 +1,9 @@
-/* Marbust Technology Company Framework CSS 4.2.0 */
+/* Marbust Technology Company Framework CSS 5.0.0 */
 /* Freedom in your design and power for your layout */
-/* Update October 28th, 2021 */
-/* 2021 - We work together for a better world */
+/* Update August 4th, 2022 */
+/* 2022 - We work together for a better world */
 /* ------------News-------------------*/
-/* This project will be descontinuated, we'll begin working in a new brand version */
-/* New Brand Version => https://github.com/MarcoAntonioMGDA/FreedomFramework */
-/* Give a new property * {box-sizing: border-box;} */
+/* We have included 4 breakpoints (break, break-s, break-m-, break-i) */
 /*------------Main Files-----------------------------------*/
 /* framework.marbust.com/marbust-framework.scss <- SASS*/
 /* framework.marbust.com/marbust-framework.css <- CSS*/
@@ -14,17 +12,19 @@
 @import 'framework-partials/mainstyle';
 //2.- Media Queries Variables and Setup
 @import 'framework-partials/mediaqueries';
-//3.- Flex Box Grid Setups, by default it's 12 columns, you can deactivate
+//3.- General Mixins
+@import 'framework-partials/mixins';
+//4.- Flex Box Grid Setups, by default it's 12 columns, you can deactivate
 @import 'framework-partials/flexboxsetups';
-//4.- Layout General Sections
+//5.- Layout General Sections
 @import 'framework-partials/layouts';
-//5.- Bucles for width, margin, padding, etc.
+//6.- Bucles for width, margin, padding, etc.
 @import 'framework-partials/bucles';
-//6.- Shadows for projects.
+//7.- Shadows for projects.
 @import 'framework-partials/shadows';
-//7.- Text Aligns.
+//8.- Text Aligns.
 @import 'framework-partials/textsetups';
-//8.- Hover Effects
+//9.- Hover Effects
 @import 'framework-partials/hovers';
 
 /*To import to your web site, in your css file add the next line:
