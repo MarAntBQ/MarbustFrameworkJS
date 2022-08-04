@@ -107,7 +107,7 @@ $boxcalc: math.div($flexboxwidth, $boxtemplate);
 }
 
 // Here it's funny because the rules change with the letter i for inter-medium screens, from 1000px to 1280 px max.
-@media (max-width: $break-intermedium) {
+@include break-i {
 
     /* Flex-Box Setup for 12 colums */
     @for $i from 1 through $boxtemplate {
@@ -200,7 +200,7 @@ $boxcalc: math.div($flexboxwidth, $boxtemplate);
 
 
 // Here it's funny because the rules change with the letter m for medium screens, from 450px to 1000 px max.
-@media (max-width: $break-medium) {
+@include break-m {
 
     /* Flex-Box Setup for 12 colums */
     @for $i from 1 through $boxtemplate {
@@ -291,7 +291,7 @@ $boxcalc: math.div($flexboxwidth, $boxtemplate);
 }
 
 // Here it's funny because the rules change with the letter p for medium screens, from 0px to 550 px max.
-@media (max-width: $break-small) {
+@include break-s {
 
     /* Flex-Box Setup for 12 colums */
     @for $i from 1 through $boxtemplate {

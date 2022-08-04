@@ -46,7 +46,7 @@
         }
 }
 
-@media (max-width: $break-intermedium) {
+@include break-i {
     @for $i from 1 through 250{  
         .fs-i-#{$i}px{      
             font-size: 0px + $i;
@@ -54,7 +54,7 @@
 }
 }
 
-@media (max-width: $break-medium) {
+@include break-m {
     @for $i from 1 through 250{  
         .fs-m-#{$i}px{      
             font-size: 0px + $i;
@@ -62,7 +62,7 @@
 }
 }
 
-@media (max-width: $break-small) {
+@include break-s {
     @for $i from 1 through 250{  
         .fs-p-#{$i}px{      
             font-size: 0px + $i;
