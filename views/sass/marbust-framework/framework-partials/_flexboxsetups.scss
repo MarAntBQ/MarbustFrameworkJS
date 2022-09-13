@@ -1,6 +1,5 @@
-@use "sass:math";
-
-$flexboxwidth: 90%;
+$flexboxwidth: 100%;
+$newMargin: 5px;
 
 @mixin flex-setup {
     display: flex;
@@ -90,19 +89,19 @@ $flexboxwidth: 90%;
 // Here it's really funny because you need to choose the main rule in the number about the boxes, and you'll play with this and auto sizes
 @mixin box-setup {
     box-sizing: border-box;
-    margin: 5px;
     transition: all 0.3s;
 }
 
 // Here you'll make your template, it's easy, if you want to work with more than 12 columns so change;
 $boxtemplate: 12;
-$boxcalc: math.div($flexboxwidth, $boxtemplate);
+$boxcalc: calcDiv($flexboxwidth, $boxtemplate);
 
 /* Flex-Box Setup for 12 colums */
 @for $i from 1 through $boxtemplate {
     .box-#{$i} {
         @include box-setup;
-        width: $boxcalc * $i;
+        $newCalc: getBlockWidth($boxcalc, $i);
+        width: getBlockMargin($newCalc, $newMargin);
     }
 }
 
@@ -113,7 +112,8 @@ $boxcalc: math.div($flexboxwidth, $boxtemplate);
     @for $i from 1 through $boxtemplate {
         .box-i-#{$i} {
             @include box-setup;
-            width: $boxcalc * $i;
+            $newCalc: getBlockWidth($boxcalc, $i);
+            width: getBlockMargin($newCalc, $newMargin);
         }
     }
 
@@ -206,7 +206,8 @@ $boxcalc: math.div($flexboxwidth, $boxtemplate);
     @for $i from 1 through $boxtemplate {
         .box-m-#{$i} {
             @include box-setup;
-            width: $boxcalc * $i;
+            $newCalc: getBlockWidth($boxcalc, $i);
+            width: getBlockMargin($newCalc, $newMargin);
         }
     }
 
@@ -297,7 +298,8 @@ $boxcalc: math.div($flexboxwidth, $boxtemplate);
     @for $i from 1 through $boxtemplate {
         .box-p-#{$i} {
             @include box-setup;
-            width: $boxcalc * $i;
+            $newCalc: getBlockWidth($boxcalc, $i);
+            width: getBlockMargin($newCalc, $newMargin);
         }
     }
 
