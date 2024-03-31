@@ -37,6 +37,7 @@ exports.getIndex = (req, res, next) => {
     res.render('template', {
         pageTitle: 'Home',
         PagetoLoad: 'home',
+        SassToLoad: 'home',
         SocialLinks: socialLinks
     });
 };
@@ -45,6 +46,7 @@ exports.getAbout = (req, res, next) => {
     res.render('template', {
         pageTitle: 'About',
         PagetoLoad: 'about',
+        SassToLoad: 'about',
         SocialLinks: socialLinks
     });
 };
@@ -54,6 +56,7 @@ exports.getServices = (req, res, next) => {
     res.render('template', {
         pageTitle: 'Services',
         PagetoLoad: 'services',
+        SassToLoad: 'services',
         SocialLinks: socialLinks,
         Title: 'Mijin'
     });
@@ -70,6 +73,7 @@ exports.getContact = (req, res, next) => {
     res.render('template', {
         pageTitle: 'Contact',
         PagetoLoad: 'contact',
+        SassToLoad: 'contact',
         SocialLinks: socialLinks,
         errorMessage: message,
         oldInput: {
@@ -95,6 +99,7 @@ exports.postContact = (req, res, next) => {
     if (!errors.isEmpty()) {
         return res.status(422).render('template', {
             pageTitle: 'Contact',
+            SassToLoad: 'contact',
             PagetoLoad: 'contact',
             SocialLinks: socialLinks,
             errorMessage: errors.array()[0].msg,
@@ -138,6 +143,7 @@ exports.postContact = (req, res, next) => {
 exports.get500 = (req, res, next) => {
     res.render('template', {
         pageTitle: 'Error de Validación',
+        SassToLoad: '500',
         PagetoLoad: '500',
         SocialLinks: socialLinks
     });
@@ -149,6 +155,7 @@ exports.get500 = (req, res, next) => {
 exports.use404 = (req, res, next) => {
     res.status(404).render('template', {
         pageTitle: 'Page Not Found',
+        SassToLoad: '404',
         PagetoLoad: '404',
         SocialLinks: socialLinks
     });
@@ -158,6 +165,7 @@ exports.use404 = (req, res, next) => {
 exports.use500 = (req, res, next) => {
     res.status(500).render('template', {
         pageTitle: 'Error de Validación',
+        SassToLoad: '500',
         PagetoLoad: '500',
         SocialLinks: socialLinks
     });

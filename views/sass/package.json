@@ -1,6 +1,0 @@
-{
-	"scripts": {
-		"install-sass": "npm install -g sass",
-		"sass": "sass --watch --no-source-map styles.scss ../../public/css/styles.css --style compressed"
-	}
-}
